@@ -1119,8 +1119,22 @@ footer p span {
   pointer-events: none;
 }
 
-/* Light Mode Background - Colorful Gradient */
+/* Light Mode Background - White and Blue */
 [data-theme="light"] body {
+  background: transparent;
+}
+
+/* Container for light mode gradient background */
+.container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+[data-theme="light"] .container {
   background: radial-gradient(
     125% 125% at -2% 101%,
     rgba(245, 87, 2, 1) 10.5%,
@@ -1131,37 +1145,61 @@ footer p span {
     rgba(202, 179, 214, 1) 65%,
     rgba(148, 201, 233, 1) 100%
   );
-  background-attachment: fixed;
 }
 
 /* Light mode text adjustments */
 [data-theme="light"] .logo {
-    background: linear-gradient(135deg, #f5576c, #f093fb);
+    background: linear-gradient(135deg, #e65100, #ff9800);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 [data-theme="light"] nav a {
-    color: #1a1a2e;
+    color: #333333;
 }
 
 [data-theme="light"] nav a:hover,
 [data-theme="light"] nav a.active {
-    color: #f5576c;
+    color: #e65100;
 }
 
 [data-theme="light"] .hero h1 {
-    color: #1a1a2e;
+    color: #333333;
+}
+
+[data-theme="light"] .hero p {
+    color: #424242;
 }
 
 [data-theme="light"] .section-header h2 {
-    color: #1a1a2e;
+    color: #333333;
+}
+
+[data-theme="light"] .section-header p {
+    color: #616161;
+}
+
+[data-theme="light"] .about,
+[data-theme="light"] .services,
+[data-theme="light"] .portfolio,
+[data-theme="light"] .contact {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+[data-theme="light"] .experience {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
 }
 
 [data-theme="light"] footer {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px 20px 0 0;
 }
+
 
 #stars {
   width: 1px;
