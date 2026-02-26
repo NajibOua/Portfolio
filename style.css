@@ -107,6 +107,10 @@ header.scrolled {
     background: rgba(10, 10, 10, 0.95);
 }
 
+[data-theme="light"] header {
+    background: rgba(255, 255, 255, 0.8);
+}
+
 [data-theme="light"] header.scrolled {
     background: rgba(255, 255, 255, 0.95);
 }
@@ -1096,7 +1100,7 @@ footer p span {
     color: white;
 }
 
-/* Stars Background */
+/* Stars Background - Dark Mode */
 .stars-background {
   position: fixed;
   top: 0;
@@ -1113,6 +1117,50 @@ footer p span {
 [data-theme="light"] .stars-background {
   opacity: 0;
   pointer-events: none;
+}
+
+/* Light Mode Background - Colorful Gradient */
+[data-theme="light"] body {
+  background: radial-gradient(
+    125% 125% at -2% 101%,
+    rgba(245, 87, 2, 1) 10.5%,
+    rgba(245, 120, 2, 1) 16%,
+    rgba(245, 140, 2, 1) 17.5%,
+    rgba(245, 170, 100, 1) 25%,
+    rgba(238, 174, 202, 1) 40%,
+    rgba(202, 179, 214, 1) 65%,
+    rgba(148, 201, 233, 1) 100%
+  );
+  background-attachment: fixed;
+}
+
+/* Light mode text adjustments */
+[data-theme="light"] .logo {
+    background: linear-gradient(135deg, #f5576c, #f093fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+[data-theme="light"] nav a {
+    color: #1a1a2e;
+}
+
+[data-theme="light"] nav a:hover,
+[data-theme="light"] nav a.active {
+    color: #f5576c;
+}
+
+[data-theme="light"] .hero h1 {
+    color: #1a1a2e;
+}
+
+[data-theme="light"] .section-header h2 {
+    color: #1a1a2e;
+}
+
+[data-theme="light"] footer {
+    background: rgba(255, 255, 255, 0.3);
 }
 
 #stars {
@@ -3208,4 +3256,3 @@ footer p span {
     transform: translateY(0);
   }
 }
-
