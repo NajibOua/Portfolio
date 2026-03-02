@@ -580,11 +580,89 @@ section {
 .service-card:nth-child(4) { transition-delay: 0.4s; }
 
 /* =============================================
+   TECHNOLOGIES SECTION
+   ============================================= */
+
+.technologies {
+    background: var(--bg-secondary);
+    overflow: hidden;
+    padding-bottom: 40px; /* Reduced bottom padding */
+}
+
+.technologies .section-header {
+    margin-bottom: 30px; /* Reduced margin */
+}
+
+.tech-slider {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.tech-track {
+    display: flex;
+    gap: 40px;
+    animation: slideLeft 20s linear infinite;
+    width: max-content;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    min-width: 100px;
+    padding: 20px;
+    background: var(--bg-tertiary);
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px var(--shadow);
+}
+
+.tech-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: grayscale(0);
+    transition: filter 0.3s ease;
+}
+
+.tech-item:hover img {
+    filter: grayscale(0);
+}
+
+.tech-item span {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* =============================================
    PORTFOLIO SECTION
    ============================================= */
 
 .portfolio {
     background: var(--bg-secondary);
+    padding-top: 40px; /* Reduced top padding */
+}
+
+.portfolio .section-header {
+    margin-bottom: 40px; /* Reduced margin */
 }
 
 .portfolio-grid {

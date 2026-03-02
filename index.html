@@ -12,6 +12,7 @@
     
     <!-- External Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./bat.ico"> ⁠
 </head>
 <body>
     <!-- From Uiverse.io by mihocsaszilard --> 
@@ -40,6 +41,7 @@
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
+            <a href="#technologies">Technologies</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
@@ -72,7 +74,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="main.jpeg" alt="Najib Ouabba">
+                <img src="main2.jpeg" alt="Najib Ouabba">
             </div>
         </div>
     </section>
@@ -136,6 +138,80 @@
         </div>
     </section>
 
+    <!-- Technologies Section -->
+    <section class="technologies" id="technologies">
+        <div class="section-header reveal">
+            <h2>Some of Technologies I Use</h2>
+            <p>Tools and technologies I work with</p>
+        </div>
+        <div class="tech-slider">
+            <div class="tech-track">
+                <!-- Original logos -->
+                <div class="tech-item">
+                    <img src="logo/html-logo.png" alt="HTML">
+                    <span>HTML</span>
+                </div>
+                <div class="tech-item">
+                    <img src="logo/JavaScript-logo.png" alt="JavaScript">
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-item">
+                    <img src="logo/React-logo.png" alt="React">
+                    <span>React</span>
+                </div>
+                <div class="tech-item">
+                    <img src="logo/nextjs-logo.png" alt="Next.js">
+                    <span>Next.js</span>
+                </div>
+                <div class="tech-item">
+                    <img src="logo/Tailwind-Logo.png" alt="Tailwind">
+                    <span>Tailwind</span>
+                </div>
+                <div class="tech-item">
+                    <img src="logo/bootsrap-logo.png" alt="Bootstrap">
+                    <span>Bootstrap</span>
+                </div>
+                <div class="tech-item">
+                    <img src="logo/Python-logo.png" alt="Python">
+                    <span>Python</span>
+                </div>
+                <!-- Duplicated logos for seamless loop -->
+                <div class="tech-item">
+                    <img src="logo/html-logo.png" alt="HTML">
+                    <span>HTML</span>
+                </div>
+                <div class="tech-item">
+                    <img src="logo/JavaScript-logo.png" alt="JavaScript">
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-item">
+                    <img src="logo/React-logo.png" alt="React">
+                    <span>React</span>
+                </div>
+                <div class="tech-item">
+                    <img src="logo/nextjs-logo.png" alt="Next.js">
+                    <span>Next.js</span>
+                </div>
+                <div class="tech-item">
+                    <img src="logo/Tailwind-Logo.png" alt="Tailwind">
+                    <span>Tailwind</span>
+                </div>
+                <div class="tech-item">
+                    <img src="logo/bootsrap-logo.png" alt="Bootstrap">
+                    <span>Bootstrap</span>
+                </div>
+                <div class="tech-item">
+                    <img src="logo/Python-logo.png" alt="Python">
+                    <span>Python</span>
+                </div>
+                <div class="tech-item">
+                    <img src="logo/CSS-logo.png" alt="Css">
+                    <span>Css</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Portfolio Section -->
     <section class="portfolio" id="portfolio">
         <div class="section-header reveal">
@@ -184,7 +260,7 @@
         </div>
         <div class="experience-grid">
             <div class="experience-item reveal">
-                <div class="experience-icon"></div>
+                <!-- <div class="experience-icon"></div> -->
                 <div class="experience-content">
                     <h3>OCP</h3>
                     <h4>TOOLS : SharePoint, React, Python (data cleaning)</h4>
@@ -195,7 +271,7 @@
         </div><br>
         <div class="experience-grid">
             <div class="experience-item reveal">
-                <div class="experience-icon"></div>
+                <!-- <div class="experience-icon"></div> -->
                 <div class="experience-content">
                     <h3>Web Designer & Developer</h3>
                     <h4>Travel Agency</h4>
@@ -205,7 +281,7 @@
         </div><br>
         <div class="experience-grid">
             <div class="experience-item reveal">
-                <div class="experience-icon"></div>
+                <!-- <div class="experience-icon"></div> -->
                 <div class="experience-content">
                     <h3>Web & Mobile Development Projects</h3>
                     <h4>Project 1 – Android Ecological Monitoring App</h4>
@@ -236,7 +312,7 @@
                 <div class="contact-details">
                     <div class="contact-item">
                         <span>📧</span>
-                        <p>najiboua7@gmail.com</p>
+                        <p>najibouabba@gmail.com</p>
                     </div>
                     <div class="contact-item">
                         <span>📍</span>
@@ -244,47 +320,19 @@
                     </div>
                 </div>
             </div>
-        <form id="contactForm" class="contact-form reveal-right">
-            <div class="form-group">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form reveal-right">
+                <div class="form-group">
+                    <input type="hidden" name="access_key" value="4f8ce796-c299-4de0-8121-e532379f5f49">
                     <input type="text" name="name" placeholder="Your Name" required>
                 </div>
-
                 <div class="form-group">
                     <input type="email" name="email" placeholder="Your Email" required>
                 </div>
-
                 <div class="form-group">
                     <textarea name="message" placeholder="Your Message" required></textarea>
                 </div>
-
-                <button type="submit" class="btn btn-primary">
-                    Send Message
-                </button>
+                <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
-
-            <script>
-            document.getElementById("contactForm").addEventListener("submit", function(e) {
-                e.preventDefault();
-
-                const name = this.elements["name"].value;
-                const email = this.elements["email"].value;
-                const message = this.elements["message"].value;
-
-                const subject = "New Contact Form Message";
-
-                const body =
-            `New message from your website:
-
-            Name: ${name}
-            Email: ${email}
-
-            Message:
-            ${message}`;
-
-                const mailtoLink = `mailto:najiboua7@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                window.location.href = mailtoLink;
-            });
-            </script> ⁠
         </div>
     </section>
 

@@ -279,22 +279,36 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.querySelector('.contact-form');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault(); // Prevent default form submission
             
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name') || this.querySelector('input[type="text"]').value;
-            const email = formData.get('email') || this.querySelector('input[type="email"]').value;
-            const message = formData.get('message') || this.querySelector('textarea').value;
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
             
-            // Simple validation
-            if (name && email && message) {
-                // Show success message (in production, send to server)
-                showNotification('Thank you for your message! I will get back to you soon.', 'success');
-                this.reset();
-            } else {
-                showNotification('Please fill in all fields.', 'error');
+            try {
+                const formData = new FormData(this);
+                
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    showNotification('Thank you! Your message has been sent.', 'success');
+                    this.reset();
+                } else {
+                    showNotification('Error sending message. Please try again.', 'error');
+                }
+            } catch (error) {
+                showNotification('Error sending message. Please try again.', 'error');
+            } finally {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
             }
         });
     }
